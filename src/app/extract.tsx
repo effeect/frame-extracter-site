@@ -92,7 +92,7 @@ const [fps, setFps] = useState(1);
 
   return (
     <>
-    <div className="mx-auto flex flex-col justify-between h-[300px] max-w-md gap-y-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5 dark:bg-slate-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10">
+    <div className="mx-auto flex flex-col justify-between max-w-md gap-y-4 rounded-xl ">
     {/* Top Controls */}
     <div className="flex justify-between items-center">
   <label
@@ -116,16 +116,16 @@ const [fps, setFps] = useState(1);
         </div>
 
     {/* Bottom Buttons */}
-    <div className="flex justify-between mt-auto">
+    <div className="flex justify-between mt-auto gap-x-4">
       <button
-        className="px-4 py-2 rounded bg-blue-600 text-white disabled:opacity-50"
+        className="px-4 py-2 rounded bg-blue-600 text-white disabled:opacity-50 hover:bg-blue-500"
         onClick={handleExtractFrames}
         disabled={!videoLoaded || isProcessing}
       >
         {isProcessing ? "Extracting..." : "Start Extraction"}
       </button>
       <button
-        className="px-4 py-2 rounded bg-green-600 text-white disabled:opacity-50"
+        className="px-4 py-2 rounded bg-green-600 text-white disabled:opacity-50 hover:bg-green-500"
         onClick={handleDownloadZip}
         disabled={frames.length === 0}
       >
