@@ -5,11 +5,11 @@ import VideoFrameExtractor from "./extract";
 import { useState } from 'react';
 import { Dialog, DialogPanel } from "@headlessui/react"
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
-
+import Head from "next/head";
 
 const navigation = [
-  { name: 'BlueSky', href: '#' },
-  { name: 'Github', href: '#' },
+  { name: 'BlueSky', href: 'https://bsky.app/profile/effeect.bsky.social' },
+  { name: 'Github', href: 'https://github.com/effeect' },
 ]
 
 export default function Home() {
@@ -17,6 +17,11 @@ export default function Home() {
 
   return (
     <>
+    <Head>
+      <title>Frame Extractor</title>
+      <meta name="description" content="Extract frames from any .mp4 video file" />
+      <link rel="icon" href="/favicon.ico" />
+    </Head>
 <div className="bg-gray-1100">
       <header className="absolute inset-x-0 top-0 z-50">
         <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
